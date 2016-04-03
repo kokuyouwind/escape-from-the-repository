@@ -17,4 +17,4 @@ if [ ! -e $file ]; then
   exit
 fi
 
-openssl aes-256-cbc -d -in $file -pass file:key
+openssl aes-256-cbc -d -in $file -pass file:key -md md5 2>/dev/null
